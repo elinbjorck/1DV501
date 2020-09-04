@@ -8,7 +8,7 @@ while True:
         break
     except ValueError as error:
         print(f'\n {error} är inte ett heltal.')
-#kollar resten när man delar med 60 för sekunder. heltalsdivision med 60 ger minuter. gör samma operationer på minuter för att få fram timmar 
+#kollar resten när man delar med 60 för sekunder. heltalsdivision med 60 ger minuter. gör samma operationer på minuter för att få fram timmar och minuter
 
 time[0] = seconds%60
 time[1] = seconds//60
