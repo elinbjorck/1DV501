@@ -1,7 +1,7 @@
-price = 372.38
-pay = 1000 #how muck person payd
+price = input('Vad kostade det du betalar för?: ')
+pay = input('Vur mycket pengar lämnade du fram?: ')
 amount = 0 # the amount of bills needed of the current type
-bills =[1000, 500, 200, 100, 50, 20, 10, 5, 1]
+bills =[1000, 500, 200, 100, 50, 20, 10, 5, 1] 
 change = pay-price
 
 for i, bill in enumerate(bills):
