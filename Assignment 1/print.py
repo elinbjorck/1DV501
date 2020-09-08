@@ -3,7 +3,7 @@ print ( the_truth )
 print ( the_truth.replace (' ','\n') )      #ersätter alla mellanslag med \n
 
 split_truth = str.split(the_truth)      #alternativt sätt: splittar strängen
-for i, word in enumerate(split_truth):      #itererar genom listan
+for i, word in enumerate(split_truth):      #itererar genom listan. sparar för att kolla upp hur man gör denna loop
     print(word)
 
 truth_border = the_truth.center(30,' ')      #Lägger till space på kanterna

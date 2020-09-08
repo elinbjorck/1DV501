@@ -1,7 +1,7 @@
 time = [0,0,0] #[seconds, minutes, hours]
 seconds = 0
 print(len(time))
-while True:
+while True: #Fortsätter loopa tills man skrivit in ett heltal
     seconds = input('skriv in ett antal sekunder(heltal): ')
     try:
         seconds = int(seconds)
