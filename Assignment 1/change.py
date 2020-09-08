@@ -7,13 +7,13 @@ change = pay-price
 for i, bill in enumerate(bills):
     amount = int(change//bill)
     change = change%bill
-    if amount != 1: #lite if satser för att printa rätt ord så att meningarna låter bra. behövs inte egentligen.
-        if bill > 10:
-            print(f'{amount} {bill}-lappar.')
-        else:
-            print(f'{amount} {bill}-kronor.')
-    else:
+    if amount == 1: #lite if satser för att printa rätt ord så att meningarna låter bra. behövs inte egentligen.
         if bill > 10:
             print(f'{amount} {bill}-lapp.')
         else:
             print(f'{amount} {bill}-krona.')
+    else:
+        if bill > 10:
+            print(f'{amount} {bill}-lappar.')
+        else:
+            print(f'{amount} {bill}-kronor.')
