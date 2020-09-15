@@ -1,13 +1,14 @@
-import sys
-
 try:
     integer = int( input( 'enter a possitive integer: ' ))
     if integer <= 0: 
-        sys.exit('please follow the instructions')
+        exit('please follow the instructions')
 except ValueError as not_a_number:
     print('please input a number')
+    exit('follow instructions')
+
 except SystemExit as not_possitive:
     print('follow instructions and input a possitive integer')
+    exit('follow instructions')
 
 sigma = 0
 k = 1
