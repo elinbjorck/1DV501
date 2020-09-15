@@ -3,14 +3,15 @@ try:
     integer = int( original )
     if integer <= 0 or original != integer: exit()
 
-    sigma = 0
-    k = 2
+except: print('Please follow the instructions'), exit(0)
 
-    while sigma < integer:
-        sigma += k
-        k += 2
+sigma = 0
+k = 2
 
-    k -= 4 # while loopen avbryts när summan blir större än integer. det skedde när k var två stärre än största-k, efter det plussas det på ytterligare 2 på k. 
-    print(f'Largest k = {k}')
-
-except: print('Please follow the instructions')
+while sigma < integer:
+    sigma += k
+    k += 2
+# rätt k är det sista där summan är under gränsen. När detta är nått plussar den på 2 på k.
+# summan är fortfarande mindre så while loopen 
+k -= 4
+print(f'Largest k = {k}')
