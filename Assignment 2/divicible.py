@@ -1,5 +1,6 @@
 n = 0
 
+#printar och bumpar upp räknaren när villkåren möts. n är räknaren. i är det aktualla talet.
 def conditions_met(n, i):
     print(i, end=' ')
     n += 1
