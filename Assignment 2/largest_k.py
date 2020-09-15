@@ -1,9 +1,10 @@
 try:
-    original = float(input('skriv in ett possitivt heltal: ')) #sparar som float först så att jag kan kolla så de inte skrev in ett decimaltal
-    integer = int( original )
-    if integer <= 0 or original != integer: exit()
+    integer = int(input('skriv in ett possitivt heltal: '))
+    if integer <= 0:
+        print('Not possitive')
+        exit(0)
 
-except: print('Please follow the instructions'), exit(0)
+except: print('Not an integer'), exit(0)
 
 sigma = 0
 k = 2

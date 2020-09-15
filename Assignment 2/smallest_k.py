@@ -1,15 +1,12 @@
 try:
-    original = float( input( 'enter a possitive integer: ' ))
-    integer = int( original )
-    if integer <= 0 or original != integer:
-        exit()
+    integer = int( input( 'Enter a possitive integer: ' ))
+
+    if integer <= 0:
+        print('Your input value is not possitive')
+        exit(0)
 
 except ValueError as not_a_number:
-    print('Please input a number')
-    exit(0)
-
-except SystemExit as not_possitive:
-    print('Follow instructions and input a possitive integer')
+    print('Please input an integer')
     exit(0)
 
 sigma = 0
