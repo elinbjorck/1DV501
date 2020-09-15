@@ -15,6 +15,6 @@ k = 1
 
 while sigma < integer:
     sigma += k
-    k+=1
-k -= 1 #den plussar på en till på slutet av varje iteration, så; för att få rätt måste vi ta bort den för att få rött ressultat.
+    k+=2
+k -= 2 #den plussar på en till på slutet av varje iteration, så; för att få rätt måste vi ta bort den för att få rött ressultat.
 print(f'smallest k is: {k}')
