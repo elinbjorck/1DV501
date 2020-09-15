@@ -9,3 +9,4 @@ while guess != random_number:
     guess=int(input('Guess again: '))
     number_of_guesses += 1
 
+print(f'You got it right after {number_of_guesses} guesses! Well donne.')
