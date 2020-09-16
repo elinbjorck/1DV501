@@ -10,6 +10,7 @@ if number % 2 == 0:
     exit(0)
 
 print('wow, du är bra på att göra som du blir tillsagd')
+#allt ovan testar talet som användaren skriver in
 
 for i in range(number):
     print(' '*i+'*'*(number-i))
