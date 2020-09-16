@@ -1,10 +1,10 @@
+from random import randint
+
 def min(list_of_numbers):
     min=list_of_numbers[0]
     for i in list_of_numbers:
         if i<min: min = i
     return min
-
-from random import randint
 
 def max(list_of_numbers):
     max = list_of_numbers[0]
