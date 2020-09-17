@@ -30,5 +30,14 @@ def contains(lst, a, b):
             if lst[i+1] == b:
                 return True
     return False
-    
+
+match_count = 0
 def has_duplicates(lst):
+    for i in lst:
+        for j in lst:
+            if i == j:
+                match_count += 1
+            if match_count>1:
+                return True
+        match_count = 0
+    return False
