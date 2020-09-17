@@ -15,16 +15,29 @@ def reverse(s):
     return rev
 
 def first_last(s):
-    first = s[1]
+    first = s[0]
     last = s[len(s)-1]
     return first, last
+
+def has_two(s,x):
+    return count(s,x) == 2
+
 def has_two_X(s):
-    s=s
+    return has_two(s,'X')
+
 def has_duplicates(s):
-    s=s
+    for character in s:
+        if has_two(s,character):
+            return True
+    return False
 
 s = 'hello world'
 
 print(concat(s, 3))
 print(count(s, 'l'))
 print(reverse(s))
+print(first_last(s))
+print(has_two_X(s))
+print(has_duplicates(s))
+print(has_two_X('XXi'))
+print(has_two_X('XXX'))
