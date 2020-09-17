@@ -24,4 +24,11 @@ def to_string(lst):
         str_ += f'{str(n)}, '
     return str_
 def contains(lst, a, b):
+    stop = len(lst)-1
+    for i in range(stop):
+        if lst[i] == a:
+            if lst[i+1] == b:
+                return True
+    return False
+    
 def has_duplicates(lst):
