@@ -12,7 +12,7 @@ def distance(point_a, point_b):
 origo = [0, 0]
 points_inside = 0
 points_total = 0
-number_of_itterations = 10000
+number_of_itterations = 1000000
 
 for i in range(number_of_itterations):
     if distance(random_point2D(), origo) <= 1:
