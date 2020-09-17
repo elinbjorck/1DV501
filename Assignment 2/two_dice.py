@@ -9,4 +9,7 @@ for i in range(10000):
     dice_sum = throwdice()+throwdice()
     ressult[dice_sum-2] += 1
 
-print(ressult)
+current = 2
+for i in ressult:
+    print(f'{current}: {i}')
+    current += 1
