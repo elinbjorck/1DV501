@@ -19,5 +19,9 @@ def only_odd(lst):
     return odd_list
 
 def to_string(lst):
+    str_ = ''
+    for n in lst:
+        str_ += f'{str(n)}, '
+    return str_
 def contains(lst, a, b):
 def has_duplicates(lst):
