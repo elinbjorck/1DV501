@@ -34,7 +34,7 @@ def ask_for_possitive_integer(instructions):
 
 def random_list(length):
     randlist = []
-    for i in range(length):
+    for _ in range(length):
         randlist.append(randint(1,100))
     return randlist
 

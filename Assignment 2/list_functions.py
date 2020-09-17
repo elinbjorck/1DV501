@@ -2,7 +2,7 @@ from random import randint
 
 def random_list(n):
     lst = []
-    for i in range(n):
+    for _ in range(n):
         lst.append(randint(1,100))
     return lst
 def average(lst):
@@ -31,8 +31,8 @@ def contains(lst, a, b):
                 return True
     return False
 
-match_count = 0
 def has_duplicates(lst):
+    match_count = 0
     for i in lst:
         for j in lst:
             if i == j:
