@@ -30,14 +30,3 @@ def has_duplicates(s):
         if has_two(s,character):
             return True
     return False
-
-s = 'hello world'
-
-print(concat(s, 3))
-print(count(s, 'l'))
-print(reverse(s))
-print(first_last(s))
-print(has_two_X(s))
-print(has_duplicates(s))
-print(has_two_X('XXi'))
-print(has_two_X('XXX'))
