@@ -45,3 +45,19 @@ if duplicates:
     print('Has duplicates')
 else:
     print('Does not have duplicates')
+
+definetley_has_duplicates = [1,1]
+duplicates = lf.has_duplicates(definetley_has_duplicates)
+
+if duplicates:
+    print(f'The list {definetley_has_duplicates} has duplicates.')
+else:
+    print(f'The list {definetley_has_duplicates} does not have duplicates.')
+
+no_duplicates = [1, 2, 3, 4]
+duplicates = lf.has_duplicates(no_duplicates)
+
+if duplicates:
+    print(f'The list {no_duplicates} has duplicates.')
+else:
+    print(f'The list {no_duplicates} does not have duplicates.')
