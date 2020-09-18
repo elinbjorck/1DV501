@@ -9,16 +9,14 @@ def ask_for_integer(message):
 numbers = []
 i = 1
 
-ask_for_integer('Give me an integer: ')
-
 while True:
     number = ask_for_integer(f'Integer {i}: ')
-    i += 1
     if number < 0:
         break
     else:
         numbers.insert(0, number)
+    i += 1
 
-
-print(numbers)
+print(f'Number of integers: {i-14}')
+print(f'In reverse: {numbers}')
 

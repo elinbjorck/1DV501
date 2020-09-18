@@ -1,4 +1,4 @@
-def is_positive_and_odd(integer):
+def is_positive_and_odd(integer): #bättre med en funktion för varje så att brogramet kan berätta vad användaren gör för fel
     return integer>0 and integer % 2 != 0
 
 for i in range(1,6):

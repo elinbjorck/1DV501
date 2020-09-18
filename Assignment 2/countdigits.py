@@ -5,7 +5,7 @@ try:
         print('Your number is not possitive')
         exit(0)
     if length < 4:
-        print("Your does'nt have enough digits")
+        print("Your number does'nt have enough digits")
         exit(0)
 
 except ValueError as letter_or_decimal:

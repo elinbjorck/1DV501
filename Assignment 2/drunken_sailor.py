@@ -33,7 +33,3 @@ for i in range(sailors):
     coordinates = [0, 0]
 
 print(f'Out of {sailors} sailors {unlucky_bastards} ({round(100*unlucky_bastards/sailors,2)}%) fell in the water.')
-
-
-
-

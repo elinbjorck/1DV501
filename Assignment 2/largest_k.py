@@ -1,10 +1,10 @@
 try:
     integer = int(input('skriv in ett possitivt heltal: '))
-    if integer <= 0:
-        print('Not possitive')
-        exit(0)
+except: print('Inte ett heltal.'), exit(0)
 
-except: print('Not an integer'), exit(0)
+if integer <= 0:
+    print('Inte possitivt')
+    exit(0)
 
 sigma = 0
 k = 2

@@ -10,11 +10,11 @@ print(f'the average of our list is: {avrg}')
 
 odd_ball = lf.only_odd(random)
 
-print(odd_ball)
+print(f'here are the odd elements in our list: {odd_ball}')
 
 stringy_boi = lf.to_string(odd_ball)
 
-print(stringy_boi)
+print(f'gere it is as a string: {stringy_boi}')
 
 big_random = lf.random_list(20)
 has_1_then_2 = lf.contains(big_random,1,2)
