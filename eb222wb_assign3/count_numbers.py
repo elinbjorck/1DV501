@@ -15,4 +15,4 @@ def count_different(lst):
 def count_ocurances(lst):
     pass
 
-test_list[1, 3 , 6, 6, 7, 8, 4, 4]
+test_list = [1, 3 , 6, 6, 7, 8, 4, 4]
