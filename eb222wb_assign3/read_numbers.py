@@ -4,8 +4,6 @@ import os
 PATH_FILE_A = os.getcwd()+'/eb222wb_assign3/10000_integers/file_10000integers_A.txt'
 PATH_FILE_B = os.getcwd()+'/eb222wb_assign3/10000_integers/file_10000integers_B.txt'
 
-print(PATH_FILE_A, PATH_FILE_B)
-
 def mean(lst):
     _sum = 0
     for i in lst:

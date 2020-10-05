@@ -1,7 +1,6 @@
 import os
 
-path_current = os.getcwd()
-print(path_current)
+dir_path = os.getcwd()
 
 def count_lines(file_path):
     lines = 0
@@ -11,16 +10,16 @@ def count_lines(file_path):
                 lines += 1
     return lines
 
-def dir_digger(path):
+def count_py_lines(path):
     directory_content = os.scandir(path)
     total_lines = 0
     for content in directory_content:
         if content.name.startswith('.'):
             continue
         elif content.is_dir():
-            total_lines += dir_digger(content.path)
+            total_lines += count_py_lines(content.path)
         elif content.name.endswith('.py'):
             total_lines += count_lines(content.path)
     return total_lines
 
-print(dir_digger(path_current))
+print(count_py_lines(dir_path))
