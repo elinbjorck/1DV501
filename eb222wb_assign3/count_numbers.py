@@ -15,21 +15,49 @@ def file_to_int_list(path, separator):
     except FileNotFoundError as error:
         print('The file can not be found', error)
         exit(0)
-    except TypeError as error:
-        print(error, 'the file contained something other than integers and separators.' )
+    except ValueError as error:
+        print(f'The file contained something other than integers and separators: {error}' )
         exit(0)
 
 def count_different(lst):
     number_set = set(lst)
-    print(len(number_set))
+    return len(number_set)
 
 def count_ocurances(lst):
     ocurances = {}
     for number in lst:
         ocurances[str(number)] = ocurances.get(str(number), 0)+1
-    print(ocurances)
+    return ocurances
+
+def most_common(dict):
+    '''returns a list [key,value] with the element in the dictionary with the highest value. '''
+    largest = [0,'']
+    for key, value in dict.items():
+        if value > largest[0]:
+            if len(largest) > 2:
+                largest = [value,key]
+
+            largest[0] = value
+            largest[1] = key
+
+        elif value == largest[0]:
+            largest.append(key)
+
+    return largest
+
+
 
 a_list = file_to_int_list(PATH_FILE_A, ',')
+common_a = most_common(count_ocurances(a_list))
+b_list = file_to_int_list(PATH_FILE_B, ':')
+common_b = most_common(count_ocurances(b_list))
 
-count_different(a_list)
-count_ocurances(a_list)
+print(f'The amount of different numbers in file A: {count_different(a_list)}')
+print(f'The most common number in A is: {common_a[1:]} with {common_a[0]} ocurances')
+
+print(f'The amount of different numbers in file B: {count_different(b_list)}')
+print(f'The most common number in B is: {common_b[1:]} with {common_b[0]} ocurances')
+
+test_list = [2,1,5,5,5,6,6,6,7,8,8] #testar om most_common kan spara ner flera värden ifall det finns dubletter.
+largest_test = most_common(count_ocurances(test_list))[1:]
+print(largest_test)

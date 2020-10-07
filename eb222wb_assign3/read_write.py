@@ -1,18 +1,22 @@
 import os
 def read_file(file_path):
-    _file = open(file_path, 'r')
-    lines = []
-    for line in _file:
-        lines.append(line)
-    _file.close()
+    try:
+        _file = open(file_path, 'r')
+        lines = []
+        for line in _file:
+            lines.append(line)
+        _file.close()
+    except FileNotFoundError:
+        print('the file did not exist')
     return lines 
 
 def write_file(lines, file_path):
+    
     _file = open(file_path, 'w')
     _file.writelines(lines)
     _file.close
 
-_path = 'C:\\Users\\elinb\\Documents\\TestMapp\\testTextFil.txt'
+_path = os.getcwd() + '/TestMapp/testTextFil.txt'
 
 read = read_file(_path)
 

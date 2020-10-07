@@ -2,12 +2,11 @@ import os
 import time
 
 PATH_NEWS = os.getcwd()+'/large_texts.txt/eng_news_100k-sentences.txt'
-PATH_GRAIL = os.getcwd()+ '/large_texts.txt/holy_grail..txt'
+PATH_GRAIL = os.getcwd()+ '/large_texts.txt/holy_grail.txt'
 PATH_TEST = os.getcwd()+'/testMapp/testTextFil.txt'
-
 #instead of leting each star represent a number of occurances I set the size I want for 
 # the histogram(histogram_size) and then create a scaling factor that makes the largest column conform to that size
-histogram_size = 50
+histogram_size = 40
 
 def largest(dict):
     '''compares the values in a dictionary and returns the largest. 
@@ -22,13 +21,17 @@ def print_histogram(dict):
     '''prints a histogram based on a dictionary'''
     largest_occurance =largest(dict)
     scaling_factor = histogram_size/largest_occurance
+    multiplyer = 0
     for key, occurance in dict.items():
-        print(f'{key} | {"*" * round(occurance*scaling_factor)}') 
+        multiplyer = round(occurance*scaling_factor)
+        if multiplyer == 0: continue
+        print(f'{key} | {"*" * multiplyer}') 
     print(f'Largest column represent {largest_occurance} letters')
 
 def count_letters(path):
     '''reads from a file and counts the letters. The method 'dict.get(key,default)' that will return 
-    default if the keydoes not exist, is used so we are safe in the cases were the letter has not been added yet'''
+    default if the keydoes not exist, is used so we are safe in the cases were the letter has not been added yet
+    this one does not return  sorted dictionary because I decided to use the other one'''
 
     letters = {}
     if not os.path.exists(path):
@@ -43,7 +46,7 @@ def count_letters(path):
                     #default if the key does not exist, is used so we are 
                     #safe in the cases were the letter has not been added yet
                     letters[character] = letters.get(character,0) + 1 
-
+    
     return letters
 
 def count_letters1(path):
@@ -69,12 +72,16 @@ def count_letters1(path):
     return letters
                 
 letters_news = count_letters1(PATH_NEWS)
-letters_python = count_letters(PATH_GRAIL)
+letters_python = count_letters1(PATH_GRAIL)
+letters_testfile = count_letters(PATH_TEST)
 
 print('Letter count in the news:')
 print_histogram(letters_news)
 print('Letter count in the holy grail:')
 print_histogram(letters_python)
+print('Letter count in test file:')
+print_histogram(letters_testfile)
+
 
 
 
