@@ -86,3 +86,4 @@ print(to_string(root))
 print(get(root,6))
 print(get_all_pairs(root))
 print(count(root))
+#hej
